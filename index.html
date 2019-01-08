@@ -3,9 +3,15 @@
     <title>Oreo</title>
 <body>
 <h1>Hello,</h1>
-    <script>alert("안녕하세요!");
-    var name=prompt("이름을 입력하십시오");
-    document.write(name)</script>
+    <script>function displayTime(){
+    var d=new date();
+    console.log("현재 시각은 "+d.toLocaleString() + " 입니다.";
+                }
+    window.onload=function(){
+    var button=document.getElementById("button");
+    button.onclick=displayTime;
+    };</script>
 <p>I'm hosted with GitHub Pages.</p>
+    <input type="button" value="click" id="button">
 </body>
 </html>
