@@ -1,17 +1,24 @@
 <!DOCTYPE html>
 <html>
-    <title>Oreo</title>
-<body>
-<h1>Hello,</h1>
-    <script>function displayTime(){
-    var d=new Date();
-    console.log("현재 시각은 "+d.toLocaleString() + " 입니다.");
-                }
+<head>
+    <meta charset="UTF-8">
+    <title>체질량지수 계산하기</title>
+    <script>
     window.onload=function(){
-    var button=document.getElementById("button");
-    button.onclick=displayTime;
-    };</script>
-<p>I'm hosted with GitHub Pages.</p>
-    <input type="button" value="click" id="button">
-</body>
+        document.getElementById("button").onclick=fucntion(){
+            var h=parseFloat(document.getElementById("Height").value);
+            var w=parseFloat(document.getElementById("Weight").value);
+            var bmi=document.getElementById("BMI");
+            bmi.innerHTML=(w/h/h).toFixed(1);
+        };
+    };
+    </script>
+    </head>
+    <body>
+        <p>키: <input type="number" id="Height"> m</p>
+        <p>몸무게: <input type="number" id="Weight"> kg</p>
+        <p>당신의 체질량지수(BMI)는 <output id="BMI">?</output> 입니다</p>
+        <input type="button" id="button" value="계산">
+    </body>
+
 </html>
